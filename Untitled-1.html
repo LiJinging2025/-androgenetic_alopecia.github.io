@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psoriasis Research Hotspots and Trends Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .header-content .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Content Sections */
+        .section {
+            background: white;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section h2 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+        
+        .importance-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Tableau Container */
+        .tableau-container {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+        }
+        
+        .tableau-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            color: #6b7280;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #1e40af;
+        }
+        
+        .feature-card h3 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Sheet Navigation */
+        .sheet-navigation {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .sheet-btn {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .sheet-btn:hover {
+            background: #e2e8f0;
+        }
+        
+        .sheet-btn.active {
+            background: #1e40af;
+            color: white;
+            border-color: #1e40af;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sheet-navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .sheet-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Evaluating Research Hotspots and Trends of Psoriasis Based on Neural Topic Model</h1>
+                <p class="subtitle">An interactive platform for analyzing psoriasis research literature using deep learning and neural topic modeling</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Importance Section -->
+        <section class="section">
+            <h2>IMPORTANCE</h2>
+            <div class="importance-content">
+                <p>The comprehensive data on psoriasis research are numerous and complex, making it difficult to retrieve and classify manually. The ability to quickly mine literature based on various fine topics using deep learning natural language processing technology to assess research topics and trends in the field of Psoriasis disease will have a significant impact on doctors' research and patients' health education.</p>
+            </div>
+        </section>
+
+        <!-- Interactive Websites Section -->
+        <section class="section">
+            <h2>Interactive Websites of Neural Topic Model</h2>
+            <p>The neural topic model based on deep learning and interactive web tools can effectively identify the research hotspots and trends in psoriasis literature, which can assist clinicians and patients in conveniently retrieving and comparing pertinent topics and research accomplishments of various years.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Topic Discovery</h3>
+                    <p>Automatically identify and categorize research topics from vast literature using neural topic models.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Trend Analysis</h3>
+                    <p>Track research trends over time and identify emerging hotspots in psoriasis research.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Interactive Visualization</h3>
+                    <p>Explore research patterns through intuitive visualizations and interactive dashboards.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tableau Visualization Section -->
+        <section class="tableau-container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Psoriasis Research Topics Distribution</h2>
+            
+            <!-- Sheet Navigation -->
+            <div class="sheet-navigation">
+                <button class="sheet-btn active" data-sheet="ARoutineTherapy_1"></button>
+            </div>
+            
+            <!-- Tableau Visualization Container -->
+            <div class='tableauPlaceholder' id='tableauVizContainer' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Psoriasis Research Topics' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DistributionmapofPsoriasisResearchTopics&#47;ARoutineTherapy_1&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='DistributionmapofPsoriasisResearchTopics&#47;ARoutineTherapy_1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DistributionmapofPsoriasisResearchTopics&#47;ARoutineTherapy_1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Psoriasis Research Analysis Platform. All rights reserved.</p>
+            <p>Neural Topic Model Analysis for Medical Research</p>
+        </div>
+    </footer>
+
+    <!-- Tableau JavaScript API -->
+    <script type='text/javascript'>
+        // Initialize Tableau visualization
+        function initTableauViz(sheetName) {
+            const container = document.getElementById('tableauVizContainer');
+            const vizElement = container.getElementsByTagName('object')[0];
+            
+            // Update the sheet parameter
+            const baseUrl = 'DistributionmapofPsoriasisResearchTopics';
+            vizElement.innerHTML = `<param name='name' value='${baseUrl}&#47;${sheetName}' />`;
+            
+            // Set responsive dimensions
+            if (container.offsetWidth > 800) {
+                vizElement.style.width = '100%';
+                vizElement.style.height = (container.offsetWidth * 0.75) + 'px';
+            } else if (container.offsetWidth > 500) {
+                vizElement.style.width = '100%';
+                vizElement.style.height = (container.offsetWidth * 0.75) + 'px';
+            } else {
+                vizElement.style.width = '100%';
+                vizElement.style.height = '727px';
+            }
+            
+            // Load Tableau API if not already loaded
+            if (!document.querySelector('script[src="https://public.tableau.com/javascripts/api/viz_v1.js"]')) {
+                const scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            }
+            
+            // Show the visualization
+            vizElement.style.display = 'block';
+        }
+        
+        // Sheet navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sheetButtons = document.querySelectorAll('.sheet-btn');
+            
+            sheetButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    sheetButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get the sheet name from data attribute
+                    const sheetName = this.getAttribute('data-sheet');
+                    
+                    // Update the visualization
+                    initTableauViz(sheetName);
+                });
+            });
+            
+            // Initialize with the first sheet
+            initTableauViz('ARoutineTherapy_1');
+        });
+    </script>
+</body>
+</html>
