@@ -70,23 +70,10 @@
         /* Tableau Container */
         .tableau-container {
             background: white;
-            padding: 1rem;
+            padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin: 2rem auto;
-        }
-        
-        .tableau-placeholder {
-            background: #f8f9fa;
-            border: 2px dashed #d1d5db;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            color: #6b7280;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         /* Features Grid */
@@ -107,35 +94,6 @@
         .feature-card h3 {
             color: #1e40af;
             margin-bottom: 0.5rem;
-        }
-        
-        /* Sheet Navigation */
-        .sheet-navigation {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .sheet-btn {
-            background: #f1f5f9;
-            border: 1px solid #cbd5e1;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .sheet-btn:hover {
-            background: #e2e8f0;
-        }
-        
-        .sheet-btn.active {
-            background: #1e40af;
-            color: white;
-            border-color: #1e40af;
         }
         
         /* Footer */
@@ -161,16 +119,36 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .sheet-navigation {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .sheet-btn {
-                width: 100%;
-                max-width: 250px;
-            }
+        }
+        
+        /* Tableau特定样式 */
+        .tableau-placeholder {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .loading-message {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .tableau-error {
+            text-align: center;
+            padding: 2rem;
+            color: #dc2626;
+            background: #fef2f2;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .tableau-error a {
+            color: #1e40af;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -218,35 +196,47 @@
 
         <!-- Tableau Visualization Section -->
         <section class="tableau-container">
-            <h2 style="text-align: center; margin-bottom: 1rem;">Androgenetic Alopecia Research Topics Distribution</h2>
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Androgenetic Alopecia Research Topics Distribution</h2>
             
-            <!-- Sheet Navigation -->
-            <div class="sheet-navigation">
-                <button class="sheet-btn active" data-sheet="ARoutineTherapy_1"></button>
-            </div>
-            
-            <!-- Tableau Visualization Container -->
-            <div class='tableauPlaceholder' id='tableauVizContainer' style='position: relative'>
+            <!-- Tableau嵌入代码 -->
+            <div class='tableau-placeholder' id='viz1764570902039'>
                 <noscript>
-                    <a href='#'>
-                        <img alt='Androgenetic Alopecia Research Topics' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DistributionmapofAndrogenetic AlopeciaResearchTopics&#47;ARoutineTherapy_1&#47;1_rss.png' style='border: none' />
-                    </a>
+                    <div class="tableau-error">
+                        <p><strong>JavaScript is required to view this visualization.</strong></p>
+                        <p>Please enable JavaScript or <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank">click here to view it directly on Tableau Public</a>.</p>
+                    </div>
                 </noscript>
-                <object class='tableauViz' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                
+                <div id="tableau-loading" class="loading-message">
+                    Loading visualization...
+                </div>
+                
+                <!-- Tableau对象 -->
+                <object class='tableauViz' style='display:none; width:100%; height:700px;'>
+                    <param name='host_url' value='https://public.tableau.com/' />
                     <param name='embed_code_version' value='3' />
                     <param name='site_root' value='' />
-                    <param name='name' value='DistributionmapofAndrogenetic AlopeciaResearchTopics&#47;ARoutineTherapy_1' />
-                    <param name='tabs' value='no' />
+                    <param name='name' value='AGA_17645596587810/ARoutineTherapy' />
+                    <param name='tabs' value='yes' />
                     <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DistributionmapofAndrogenetic AlopeciaResearchTopics&#47;ARoutineTherapy_1&#47;1.png' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/AG/AGA_17645596587810/ARoutineTherapy/1.png' />
                     <param name='animate_transition' value='yes' />
                     <param name='display_static_image' value='yes' />
                     <param name='display_spinner' value='yes' />
                     <param name='display_overlay' value='yes' />
                     <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
+                    <param name='language' value='zh-CN' />
                 </object>
+            </div>
+            
+            <!-- 备用链接 -->
+            <div style="text-align: center; margin-top: 1rem;">
+                <small style="color: #666;">
+                    Can't see the visualization? 
+                    <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank" style="color: #1e40af; text-decoration: none;">
+                        View directly on Tableau Public ↗
+                    </a>
+                </small>
             </div>
         </section>
     </div>
@@ -259,63 +249,95 @@
         </div>
     </footer>
 
-    <!-- Tableau JavaScript API -->
+    <!-- Tableau JavaScript -->
     <script type='text/javascript'>
-        // Initialize Tableau visualization
-        function initTableauViz(sheetName) {
-            const container = document.getElementById('tableauVizContainer');
-            const vizElement = container.getElementsByTagName('object')[0];
-            
-            // Update the sheet parameter
-            const baseUrl = 'DistributionmapofAndrogenetic AlopeciaResearchTopics';
-            vizElement.innerHTML = `<param name='name' value='${baseUrl}&#47;${sheetName}' />`;
-            
-            // Set responsive dimensions
-            if (container.offsetWidth > 800) {
-                vizElement.style.width = '100%';
-                vizElement.style.height = (container.offsetWidth * 0.75) + 'px';
-            } else if (container.offsetWidth > 500) {
-                vizElement.style.width = '100%';
-                vizElement.style.height = (container.offsetWidth * 0.75) + 'px';
-            } else {
-                vizElement.style.width = '100%';
-                vizElement.style.height = '727px';
-            }
-            
-            // Load Tableau API if not already loaded
-            if (!document.querySelector('script[src="https://public.tableau.com/javascripts/api/viz_v1.js"]')) {
-                const scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            }
-            
-            // Show the visualization
-            vizElement.style.display = 'block';
-        }
-        
-        // Sheet navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const sheetButtons = document.querySelectorAll('.sheet-btn');
+            const divElement = document.getElementById('viz1764570902039');
+            const vizElement = divElement.getElementsByTagName('object')[0];
+            const loadingElement = document.getElementById('tableau-loading');
             
-            sheetButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    sheetButtons.forEach(btn => btn.classList.remove('active'));
+            if (vizElement) {
+                // 设置尺寸
+                function resizeTableau() {
+                    const containerWidth = divElement.offsetWidth;
+                    const aspectRatio = 0.75; // 3:4比例
+                    const height = containerWidth * aspectRatio;
                     
-                    // Add active class to clicked button
-                    this.classList.add('active');
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = Math.max(height, 500) + 'px'; // 最小高度500px
+                }
+                
+                // 初始化尺寸
+                resizeTableau();
+                
+                // 监听窗口大小变化
+                window.addEventListener('resize', resizeTableau);
+                
+                // 加载Tableau API
+                if (!document.querySelector('script[src="https://public.tableau.com/javascripts/api/viz_v1.js"]')) {
+                    const scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                     
-                    // Get the sheet name from data attribute
-                    const sheetName = this.getAttribute('data-sheet');
+                    // API加载成功后显示可视化
+                    scriptElement.onload = function() {
+                        setTimeout(function() {
+                            if (loadingElement) {
+                                loadingElement.style.display = 'none';
+                            }
+                            vizElement.style.display = 'block';
+                        }, 500);
+                    };
                     
-                    // Update the visualization
-                    initTableauViz(sheetName);
-                });
-            });
-            
-            // Initialize with the first sheet
-            initTableauViz('ARoutineTherapy_1');
+                    // API加载失败处理
+                    scriptElement.onerror = function() {
+                        if (loadingElement) {
+                            loadingElement.innerHTML = '<div class="tableau-error">Failed to load Tableau visualization. <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank">View on Tableau Public</a></div>';
+                        }
+                    };
+                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                }
+                
+                // 设置超时检查
+                setTimeout(function() {
+                    if (loadingElement && loadingElement.style.display !== 'none') {
+                        loadingElement.innerHTML = '<div class="tableau-error">Visualization is taking longer than expected. <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank">View on Tableau Public</a></div>';
+                    }
+                }, 10000); // 10秒超时
+                
+                // 显示可视化
+                vizElement.style.display = 'block';
+            } else {
+                // 如果找不到Tableau对象
+                if (loadingElement) {
+                    loadingElement.innerHTML = '<div class="tableau-error">Tableau visualization element not found. Please check the embedding code.</div>';
+                }
+            }
         });
     </script>
+    
+    <!-- 备用方案：iframe嵌入（注释状态，需要时启用） -->
+    <!--
+    <script>
+        // 如果上面的方法失败，可以使用iframe备用方案
+        function loadTableauFallback() {
+            const container = document.getElementById('viz1764570902039');
+            if (container && container.innerHTML.includes('tableau-error')) {
+                container.innerHTML = `
+                    <iframe 
+                        src="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy?:showVizHome=no&:embed=true&:display_count=yes&:language=zh-CN"
+                        width="100%" 
+                        height="700" 
+                        style="border: none; border-radius: 8px;"
+                        allowfullscreen>
+                    </iframe>
+                `;
+            }
+        }
+        
+        // 5秒后检查是否加载成功
+        setTimeout(loadTableauFallback, 5000);
+    </script>
+    -->
 </body>
 </html>
