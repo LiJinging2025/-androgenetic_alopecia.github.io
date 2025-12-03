@@ -28,18 +28,19 @@
         header {
             background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
             color: white;
-            padding: 3rem 0;
+            padding: 2.5rem 0;
             text-align: center;
+            margin-bottom: 2rem;
         }
         
         .header-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
             font-weight: 700;
         }
         
         .header-content .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.9;
             max-width: 800px;
             margin: 0 auto;
@@ -48,83 +49,117 @@
         /* Content Sections */
         .section {
             background: white;
-            margin: 2rem auto;
-            padding: 2rem;
+            margin: 1.5rem auto;
+            padding: 1.8rem;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
         }
         
         .section h2 {
             color: #1e40af;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.6rem;
             border-bottom: 2px solid #e5e7eb;
             padding-bottom: 0.5rem;
         }
         
-        .importance-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
+        .content-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .content-text p {
+            margin-bottom: 1rem;
+        }
+        
+        .highlight {
+            background-color: #f0f9ff;
+            border-left: 4px solid #1e40af;
+            padding: 1rem;
+            margin: 1.2rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        /* Image Display Section */
+        .image-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .image-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .research-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.8rem;
+            text-align: center;
         }
         
         /* Tableau Container */
         .tableau-container {
             background: white;
-            padding: 2rem;
+            padding: 1.8rem;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+            margin: 1.5rem auto;
         }
         
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+        /* Method Flow */
+        .method-flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
         
-        .feature-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #1e40af;
-        }
-        
-        .feature-card h3 {
-            color: #1e40af;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1f2937;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+        .method-step {
+            background: #e0f2fe;
+            padding: 0.8rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #0369a1;
+            font-size: 0.9rem;
         }
         
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .section {
-                padding: 1rem;
-                margin: 1rem auto;
+                padding: 1.3rem;
+                margin: 1.2rem auto;
             }
             
-            .features-grid {
-                grid-template-columns: 1fr;
+            .method-flow {
+                flex-direction: column;
+                align-items: center;
             }
         }
         
         /* Tableau特定样式 */
         .tableau-placeholder {
             width: 100%;
-            height: 700px;
+            height: 650px;
             border: none;
             border-radius: 8px;
             overflow: hidden;
@@ -139,7 +174,7 @@
         
         .tableau-error {
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             color: #dc2626;
             background: #fef2f2;
             border-radius: 8px;
@@ -150,6 +185,21 @@
             color: #1e40af;
             text-decoration: underline;
         }
+        
+        /* 优化间距 */
+        .section + .section {
+            margin-top: 2rem;
+        }
+        
+        /* List styling */
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -157,53 +207,75 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Evaluating Research Hotspots and Trends of Androgenetic Alopecia Based on Neural Topic Model</h1>
-                <p class="subtitle">An interactive platform for analyzing Androgenetic Alopecia research literature using deep learning and neural topic modeling</p>
+                <h1>Research Hotspots and Trends Analysis of Androgenetic Alopecia</h1>
+                <p class="subtitle">An Agent-Autotuned Topic Modeling Approach with DeepSeek</p>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Importance Section -->
+        <!-- Research Overview Section -->
         <section class="section">
-            <h2>IMPORTANCE</h2>
-            <div class="importance-content">
-                <p>The comprehensive data on Androgenetic Alopecia research are numerous and complex, making it difficult to retrieve and classify manually. The ability to quickly mine literature based on various fine topics using deep learning natural language processing technology to assess research topics and trends in the field of Androgenetic Alopecia disease will have a significant impact on doctors' research and patients' health education.</p>
+            <h2>Research Overview</h2>
+            <div class="content-text">
+                <p>This study addresses the massive and complex literature data in the field of Androgenetic Alopecia (AGA) by developing a deep learning-based agent-autotuned topic modeling approach. By combining natural language processing techniques, unsupervised clustering algorithms, and large language model feedback mechanisms, we achieve automatic topic discovery, hotspot identification, and trend analysis of AGA research literature.</p>
+                
+                <div class="highlight">
+                    <p><strong>Core Methodology:</strong> BERT Sentence Embeddings → UMAP Dimensionality Reduction → DBSCAN Clustering → c-TF-IDF Topic Extraction → DeepSeek Agent Tuning → Topic Model Optimization</p>
+                </div>
+                
+                <p>The primary objective of this research is to provide clinicians, researchers, and patients with an intuitive, interactive knowledge graph of AGA research, facilitating rapid understanding of the current research landscape, development trends, and potential research directions in this field.</p>
             </div>
         </section>
 
-        <!-- Interactive Websites Section -->
+        <!-- Methodology Image Section -->
         <section class="section">
-            <h2>Interactive Websites of Neural Topic Model</h2>
-            <p>The neural topic model based on deep learning and interactive web tools can effectively identify the research hotspots and trends in Androgenetic Alopecia literature, which can assist clinicians and patients in conveniently retrieving and comparing pertinent topics and research accomplishments of various years.</p>
+            <h2>Research Methodology and Technical Workflow</h2>
+            <div class="image-section">
+                <div class="image-container">
+                    <!-- Direct image insertion from the specified path -->
+                    <img src="E:\文献\d85d40c3-0795-4a5b-8838-c1b4d7431c9b.png" 
+                         alt="Research Methodology Workflow Diagram" 
+                         class="research-image">
+                    <div class="image-caption">
+                        Figure 1: The agent-autotuned topic modeling workflow used in this study. Shows the complete technical process from literature preprocessing to topic model optimization.
+                    </div>
+                </div>
+            </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Topic Discovery</h3>
-                    <p>Automatically identify and categorize research topics from vast literature using neural topic models.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Trend Analysis</h3>
-                    <p>Track research trends over time and identify emerging hotspots in Androgenetic Alopecia research.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Interactive Visualization</h3>
-                    <p>Explore research patterns through intuitive visualizations and interactive dashboards.</p>
-                </div>
+            <div class="method-flow">
+                <div class="method-step">Literature Collection & Preprocessing</div>
+                <div class="method-step">BERT Sentence Encoding</div>
+                <div class="method-step">UMAP Dimensionality Reduction</div>
+                <div class="method-step">DBSCAN Clustering Analysis</div>
+                <div class="method-step">c-TF-IDF Topic Extraction</div>
+                <div class="method-step">DeepSeek Agent Tuning</div>
+                <div class="method-step">Topic Model Optimization</div>
+            </div>
+            
+            <div class="content-text">
+                <p><strong>Detailed Implementation:</strong></p>
+                <ul>
+                    <li><strong>Data Collection:</strong> Compiled research literature on AGA from the past decade, creating a structured database with titles, abstracts, keywords, and publication years.</li>
+                    <li><strong>Text Processing:</strong> Implemented advanced NLP preprocessing including tokenization, stopword removal, and text normalization.</li>
+                    <li><strong>Embedding Generation:</strong> Utilized BERT-based models to create high-quality sentence embeddings that capture semantic meaning.</li>
+                    <li><strong>Visualization Pipeline:</strong> Developed a comprehensive visualization system that transforms high-dimensional embeddings into 2D/3D representations for intuitive analysis.</li>
+                    <li><strong>Agent Integration:</strong> Incorporated DeepSeek as an intelligent agent for parameter tuning and content optimization, creating a hybrid "unsupervised + supervised" methodology.</li>
+                </ul>
             </div>
         </section>
 
         <!-- Tableau Visualization Section -->
         <section class="tableau-container">
-            <h2 style="text-align: center; margin-bottom: 1.5rem;">Androgenetic Alopecia Research Topics Distribution</h2>
+            <h2 style="text-align: center; margin-bottom: 1.5rem; color: #1e40af;">Androgenetic Alopecia Therapeutic Methods Analysis</h2>
             
-            <!-- Tableau嵌入代码 -->
-            <div class='tableau-placeholder' id='viz1764570902039'>
+            <!-- 新的Tableau嵌入代码 -->
+            <div class='tableauPlaceholder' id='viz1764733421782' style='position: relative; width: 100%; height: 700px; border: none; border-radius: 8px; overflow: hidden;'>
                 <noscript>
                     <div class="tableau-error">
                         <p><strong>JavaScript is required to view this visualization.</strong></p>
-                        <p>Please enable JavaScript or <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank">click here to view it directly on Tableau Public</a>.</p>
+                        <p>Please enable JavaScript or <a href='https://public.tableau.com/views/135_17647332017800/Therapeutic_Methods' target='_blank'>click here to view it directly on Tableau Public</a>.</p>
                     </div>
                 </noscript>
                 
@@ -211,15 +283,14 @@
                     Loading visualization...
                 </div>
                 
-                <!-- Tableau对象 -->
-                <object class='tableauViz' style='display:none; width:100%; height:700px;'>
-                    <param name='host_url' value='https://public.tableau.com/' />
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                     <param name='embed_code_version' value='3' />
                     <param name='site_root' value='' />
-                    <param name='name' value='AGA_17645596587810/ARoutineTherapy' />
+                    <param name='name' value='135_17647332017800/Therapeutic_Methods' />
                     <param name='tabs' value='yes' />
                     <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https://public.tableau.com/static/images/AG/AGA_17645596587810/ARoutineTherapy/1.png' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/13/135_17647332017800/Therapeutic_Methods/1.png' />
                     <param name='animate_transition' value='yes' />
                     <param name='display_static_image' value='yes' />
                     <param name='display_spinner' value='yes' />
@@ -233,26 +304,24 @@
             <div style="text-align: center; margin-top: 1rem;">
                 <small style="color: #666;">
                     Can't see the visualization? 
-                    <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank" style="color: #1e40af; text-decoration: none;">
+                    <a href="https://public.tableau.com/views/135_17647332017800/Therapeutic_Methods" target="_blank" style="color: #1e40af; text-decoration: none;">
                         View directly on Tableau Public ↗
                     </a>
                 </small>
             </div>
+            
+            <div style="margin-top: 1.5rem; padding: 1rem; background-color: #f0f9ff; border-radius: 5px;">
+                <p style="font-size: 0.9rem; color: #555; text-align: center;">
+                    <strong>Chart Description:</strong> This visualization shows the distribution and trends of therapeutic methods in Androgenetic Alopecia research. It highlights various treatment approaches identified through neural network topic modeling, including their prevalence and evolution over time.
+                </p>
+            </div>
         </section>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Androgenetic Alopecia Research Analysis Platform. All rights reserved.</p>
-            <p>Neural Topic Model Analysis for Medical Research</p>
-        </div>
-    </footer>
 
     <!-- Tableau JavaScript -->
     <script type='text/javascript'>
         document.addEventListener('DOMContentLoaded', function() {
-            const divElement = document.getElementById('viz1764570902039');
+            const divElement = document.getElementById('viz1764733421782');
             const vizElement = divElement.getElementsByTagName('object')[0];
             const loadingElement = document.getElementById('tableau-loading');
             
@@ -291,7 +360,7 @@
                     // API加载失败处理
                     scriptElement.onerror = function() {
                         if (loadingElement) {
-                            loadingElement.innerHTML = '<div class="tableau-error">Failed to load Tableau visualization. <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank">View on Tableau Public</a></div>';
+                            loadingElement.innerHTML = '<div class="tableau-error">Failed to load Tableau visualization. <a href="https://public.tableau.com/views/135_17647332017800/Therapeutic_Methods" target="_blank">View on Tableau Public</a></div>';
                         }
                     };
                     
@@ -301,7 +370,7 @@
                 // 设置超时检查
                 setTimeout(function() {
                     if (loadingElement && loadingElement.style.display !== 'none') {
-                        loadingElement.innerHTML = '<div class="tableau-error">Visualization is taking longer than expected. <a href="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy" target="_blank">View on Tableau Public</a></div>';
+                        loadingElement.innerHTML = '<div class="tableau-error">Visualization is taking longer than expected. <a href="https://public.tableau.com/views/135_17647332017800/Therapeutic_Methods" target="_blank">View on Tableau Public</a></div>';
                     }
                 }, 10000); // 10秒超时
                 
@@ -315,29 +384,5 @@
             }
         });
     </script>
-    
-    <!-- 备用方案：iframe嵌入（注释状态，需要时启用） -->
-    <!--
-    <script>
-        // 如果上面的方法失败，可以使用iframe备用方案
-        function loadTableauFallback() {
-            const container = document.getElementById('viz1764570902039');
-            if (container && container.innerHTML.includes('tableau-error')) {
-                container.innerHTML = `
-                    <iframe 
-                        src="https://public.tableau.com/views/AGA_17645596587810/ARoutineTherapy?:showVizHome=no&:embed=true&:display_count=yes&:language=zh-CN"
-                        width="100%" 
-                        height="700" 
-                        style="border: none; border-radius: 8px;"
-                        allowfullscreen>
-                    </iframe>
-                `;
-            }
-        }
-        
-        // 5秒后检查是否加载成功
-        setTimeout(loadTableauFallback, 5000);
-    </script>
-    -->
 </body>
 </html>
